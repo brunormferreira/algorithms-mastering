@@ -22,3 +22,10 @@ function descendingOrder(number) {
   
   return parsed;  
 }
+
+function descendingOrder2(n) {
+  return Number(String(n).split('').sort().reverse().join(''))
+}
+
+console.log(descendingOrder(12345));
+console.log(descendingOrder2(123456789));
