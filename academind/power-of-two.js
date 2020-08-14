@@ -18,6 +18,16 @@ function isPowerOfTwo(number) {
 // Average Case: O(log n)
 // Worst Case: 1,125,899,906,842,624 => O(log2 n)
 
+// binary notation - bitwise operator (&)
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators
+
+function isPowerOfTwo(number) {
+  if (number < 1) {
+    return false
+  }
+
+  return (number & (number - 1)) === 0; // O(1)
+}
 
 console.log(isPowerOfTwo(8)) // true
 console.log(isPowerOfTwo(5)) // false
